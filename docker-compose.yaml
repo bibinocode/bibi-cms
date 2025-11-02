@@ -1,0 +1,17 @@
+name: bibi-cms
+
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=bibi_cms_root
+      - MYSQL_DATABASE=bibi_cms
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - 3306:3306
+  
+volumes:
+  mysql_data:
+    driver: local

@@ -1,0 +1,29 @@
+{
+    "Go File Header Copyright": {
+        "prefix": "copyright",
+        "body": [
+            "/*",
+            " * Copyright (c) ${CURRENT_YEAR} ${1:Your Name/Company}. All rights reserved.",
+            " * ",
+            " * This source code is licensed under the ${2:MIT} license found in the",
+            " * LICENSE file in the root directory of this source tree.",
+            " */",
+            "",
+            "package ${TM_DIRECTORY/(.*\\/)|\\/$/g;ms/.*\\/([^/]+)$/${2:/downcase}/}",
+            ""
+        ],
+        "description": "Insert copyright header for Go files"
+    },
+    "Go File Header Simple": {
+        "prefix": "header",
+        "body": [
+            "/**",
+            "@Time : ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+            "@Author : bibinocode",
+            "@File : ${TM_FILENAME}",
+            "@Software: GoLand",
+            "*/"
+        ],
+        "description": "Insert simple copyright header for Go files"
+    }
+}
